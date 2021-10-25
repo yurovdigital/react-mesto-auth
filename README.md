@@ -22,7 +22,7 @@
 ![React](https://img.shields.io/badge/-React-141130?style=flat-square&logo=React&)
 
 
-* `npm run dev` - сборка для разработки
+* `npm run start` - сборка для разработки
 * `npm run build` - финальная сборка
 
 ---
