@@ -243,8 +243,11 @@ function App() {
           {/* FOOTER */}
           <Footer />
 
-          {/* POPUP - INFO TOOLTIP */}
-          <InfoTooltip
+         
+        </div>
+
+         {/* POPUP - INFO TOOLTIP */}
+         <InfoTooltip
             isOpen={isInfoTooltipOpen}
             onClose={closeAllPopups}
             isRegistrationSuccess={isRegistrationSuccess}
@@ -271,7 +274,6 @@ function App() {
 
           {/* POPUP - IMAGE FULLSCREEN */}
           <ImagePopup card={selectedCard} onClose={closeAllPopups} />
-        </div>
       </div>
     </CurrentUserContext.Provider>
   )
