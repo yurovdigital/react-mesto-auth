@@ -34,6 +34,9 @@ function App() {
   const history = useHistory()
   const [email, setEmail] = React.useState('')
 
+  //Loading
+  const [loading, setLoading] = React.useState(false)
+
   // API
   React.useEffect(() => {
     api
@@ -49,6 +52,7 @@ function App() {
   // Auth
   // Регистрация пользователя
   function handleRegistrationSubmit(email, password) {
+    setLoading(true)
     auth
       .registration(email, password)
       .then((res) => {
@@ -58,11 +62,13 @@ function App() {
           history.push('/sign-in')
         }
       })
+      
       .catch((err) => {
         setIsRegistrationSuccess(false)
         setIsInfoTooltipOpen(true)
         console.log(err)
       })
+      setLoading(false)
   }
 
   // Логин пользователя
