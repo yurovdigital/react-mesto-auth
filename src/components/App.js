@@ -89,20 +89,33 @@ function App() {
   }
 
   // Проверка токена
+  // React.useEffect(() => {
+  //   const jwt = localStorage.getItem('token')
+  //   if (jwt) {
+  //     auth
+  //       .checkToken(jwt)
+  //       .then((res) => {
+  //         setIsLoggedIn(true)
+  //         setEmail(res.data.email)
+  //         history.push('/')
+  //       })
+  //       .catch((err) => {
+  //         console.log(err)
+  //       })
+  //   }
+  // })
+
   React.useEffect(() => {
-    const jwt = localStorage.getItem('token')
-    if (jwt) {
-      auth
-        .checkToken(jwt)
-        .then((res) => {
-          setIsLoggedIn(true)
-          setEmail(res.data.email)
-          history.push('/')
-        })
-        .catch((err) => {
-          console.log(err)
-        })
-    }
+    auth
+      .checkToken(jwt)
+      .then((res) => {
+        setIsLoggedIn(true)
+        setEmail(res.data.email)
+        history.push('/')
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   })
 
   // Выход из аккаунта
