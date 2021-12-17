@@ -54,8 +54,8 @@ class Api {
   }
 
   /* Удаление фото */
-  deletePhoto(photoID) {
-    return fetch(`${this._baseUrl}/cards/${photoID}`, {
+  deletePhoto(photoId) {
+    return fetch(`${this._baseUrl}/cards/${photoId}`, {
       method: 'DELETE',
       headers: this._headers,
       credentials: 'include',
