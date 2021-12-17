@@ -99,8 +99,7 @@ const api = new Api({
 
   headers: {
     'Content-Type': 'application/json',
-    Authorization:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWJjY2YzZTlhYjEyNjU0ZjIzMjlkMDAiLCJpYXQiOjE2Mzk3Njc4MjcsImV4cCI6MTY0MDM3MjYyN30.lQed5i2z8y9f72wlNs2MJ6qzH8rFZaQJ8h6n_JZnK_k',
+    Authorization: `Bearer ${localStorage.getItem('token')}`,
   },
 })
 
