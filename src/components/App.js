@@ -77,7 +77,7 @@ function App() {
       .login(email, password)
       .then((res) => {
         if (res) {
-          localStorage.setItem('jwt', res.token)
+          localStorage.setItem('token', res.token)
           setIsLoggedIn(true)
           setEmail(email)
           history.push('/')
@@ -90,7 +90,7 @@ function App() {
 
   // Проверка токена
   React.useEffect(() => {
-    const jwt = localStorage.getItem('jwt')
+    const jwt = localStorage.getItem('token')
     if (jwt) {
       auth
         .checkToken(jwt)
@@ -107,7 +107,7 @@ function App() {
 
   // Выход из аккаунта
   function handleSignOut() {
-    localStorage.removeItem('jwt')
+    localStorage.removeItem('token')
     setIsLoggedIn(false)
     history.push('/sign-in')
   }
