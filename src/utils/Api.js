@@ -104,7 +104,7 @@ class Api {
 
 // NEW API
 const api = new Api({
-  baseUrl: 'https://api.yurov.mesto.nomoredomains.rocks',
+  baseUrl: 'http://api.yurov.mesto.nomoredomains.rocks',
   headers: {
     'Content-Type': 'application/json',
   },

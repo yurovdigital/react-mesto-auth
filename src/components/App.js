@@ -107,7 +107,7 @@ function App() {
 
   React.useEffect(() => {
     auth
-      .checkToken(jwt)
+      .checkToken()
       .then((res) => {
         setIsLoggedIn(true)
         setEmail(res.data.email)
