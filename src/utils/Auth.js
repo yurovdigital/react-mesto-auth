@@ -15,8 +15,8 @@ export const registration = (email, password) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      "email": email,
-      "password": password,
+      email: email,
+      password: password,
     }),
   }).then((res) => hanldeResponse(res))
 }
@@ -44,7 +44,7 @@ export const checkToken = (token) => {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${localStorage.getItem('token')}`,
     },
   }).then((res) => hanldeResponse(res))
 }
