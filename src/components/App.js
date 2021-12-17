@@ -77,7 +77,7 @@ function App() {
       .login(email, password)
       .then((res) => {
         if (res) {
-          localStorage.setItem('jwt', res.jwt)
+          localStorage.setItem('jwt', res.token)
           setIsLoggedIn(true)
           setEmail(email)
           history.push('/')
