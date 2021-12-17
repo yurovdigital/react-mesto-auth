@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co'
+export const BASE_URL = 'https://api.yurov.mesto.nomoredomains.rocks'
 
 const hanldeResponse = (res) => {
   if (!res.ok) {
