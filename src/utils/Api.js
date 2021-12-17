@@ -96,11 +96,6 @@ class Api {
 // NEW API
 const api = new Api({
   baseUrl: 'https://api.yurov.mesto.nomoredomains.rocks',
-
-  headers: {
-    'Content-Type': 'application/json',
-    Authorization: `Bearer ${localStorage.getItem('token')}`,
-  },
 })
 
 export default api
